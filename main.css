@@ -1,5 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
 
 /* Reset */
 * {
@@ -24,8 +24,8 @@ body {
     background: #fff;
 }
 .logo {
-    width: 267px;
-    height: 53px;
+    width: 250px;
+    height: 50px;
     background: url(./assets/checker.png);
     background-size: cover;
     background-position: center;
@@ -42,18 +42,31 @@ body {
 .btn-txt {
     border: none;
     background: none;
-    color: #616366;
+}
+.btn-txt a {
+    color: #616366 !important;
 }
 .btn-btn {
-    width: 213px;
-    height: 56px;
-    padding: 16px 24px;
+    width: 160px;
+    height: 50px;
     background: #1160E9;
     border-radius: 2px;
     color: white;
     border: none;
+    font-weight: 700;
+    font-size: 1.2;
 }
-
+a {
+    text-decoration: none;
+    color: white;
+}
+.btn-btn a {
+    display: block;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* Hero */
 .hero {
     height: 90vh;
@@ -64,8 +77,8 @@ body {
 }
 .hero-card {
     background: #fff;
-    height: 270px;
-    width: 270px;
+    height: 36vh;
+    width: 19vw;
     margin-left: 8%;
     margin-top: -50px;
     z-index: 1000;
@@ -73,16 +86,24 @@ body {
     justify-content: center;
     align-items: center;
     box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
     padding: 60px;
 }
 .card-content {
     display: flex;
     flex-direction: column;
     gap: 32px;
+    z-index: 100;
 }
 .card-content h1 {
     line-height: 35px;
-    font-size: 1.7em;
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #222426;
+}
+.card-content div {
+    color: #616366;
+    font-size: 1em;
 }
 .hero-image {
     background: url('./assets/heroImage.png');
@@ -93,13 +114,14 @@ body {
     width: 77vw;
     position: absolute;
     right: 8%;
+    border-radius: 4px;
+    z-index: 100;
 }
 .hero .brand-bar {
     width: 100%;
     height: 8px;
     background: blue;
     position: absolute;
-    z-index: -100;
     bottom: 15vh;
 }
 .ui-overlay {
@@ -113,17 +135,19 @@ body {
 .intro {
     margin-top: 50px;
     display: flex;
-    width: 80%;
+    width: 87%;
     margin-left: auto;
     margin-right: auto;
     background: #fff;
     justify-content: center;
     align-items: center;
-    padding: 75px;
+    padding: 30px 50px;
+    border-radius: 8px;
 }
 .intro-nested {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 .intro-image {
@@ -131,8 +155,9 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 60vh;
+    height: 50vh;
     width: 57%;
+    border-radius: 4px;
 }
 .intro-content {
     height: 60vh;
@@ -143,16 +168,20 @@ body {
 .title {
     text-transform: uppercase;
     color: #1160E9;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 1.2;
 }
 .headline {
-    font-size: 2em;
+    font-size: 2.1em;
     margin-top: 10px;
-    font-weight: bolder;
+    font-weight: 600;
+    line-height: 45px;
+    color: #222426;
 }
 .content-body {
     margin-top: 15px;
     color: #616366;
+    font-size: 1em;
 }
 
 /* Floor Plans */
@@ -164,8 +193,9 @@ body {
     text-align: center;
 }
 .fp-headline {
-    font-weight: bolder;
+    font-weight: 600;
     font-size: 1.25em;
+    color: #222426;
 }
 .fp-options {
     margin-top: 35px;
@@ -174,24 +204,30 @@ body {
 }
 .value {
     font-size: 4em;
+    color: #222426;
 }
 .label {
     color: #616366;
     font-size: 1.25em;
+    font-weight: 600;
 }
 
 /* Amenities */
 .amenities {
     margin-top: 100px;
     display: flex;
-    width: 80%;
+    width: 85%;
     height: 1000px;
     margin-left: auto;
     margin-right: auto;
     background: #fff;
     justify-content: center;
     align-items: center;
-    padding: 75px;
+    padding: 50px;
+    border-radius: 8px;
+}
+.amenities .headline {
+    font-size: 2em;
 }
 .amen-content {
     width: 40%;
@@ -200,7 +236,7 @@ body {
     width: 57%;
 }
 .amen-image {
-    height: 60vh;
+    height: 50vh;
     width: 100%;
     background: Red;
 }
@@ -209,12 +245,14 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 4px;
 }
 .amen-image:nth-child(2) {
     background: url('./assets/community.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 4px;
 }
 .m-top {
     margin-top: 50px;
@@ -224,18 +262,31 @@ body {
     text-align: center;
     width: 100%;
     height: 25px;
+    font-size: 1.2;
 }
 .category {
     margin-top: 15px;
-    line-height: 40px;
+    line-height: 30px;
 }
 .cat-title {
     font-size: 1.2em;
-    font-weight: bolder;
+    font-weight: 600;
     text-transform: uppercase;
+    color: #222426;
+    font-size: 1.2;
+    margin-top: 25px;
+}
+.cat-title:first-child {
+    margin-top: 65px;
 }
 .amen-content ul {
     color: #616366;
+    font-size: 1em;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+.amen-content ul li {
+    margin-bottom: 5px;
 }
 .amen-item-img {
     list-style-image: url('./assets/cam.png');
@@ -243,7 +294,7 @@ body {
 /* Neighborhood */
 .neighborhood {
     margin-top: 100px;
-    height: 90vh;
+    height: 82vh;
     position: relative;
 }
 .neighbor-content {
@@ -257,6 +308,7 @@ body {
 .address {
     color: #616366;
     margin-top: 10px;
+    font-size: 1em;
 }
 .map {
     width: 70%;
@@ -267,7 +319,8 @@ body {
     background-repeat: no-repeat;
     position: absolute;
     bottom: 0;
-    left: 15%;
+    border-radius: 8px;
+    left: 18%;
 }
 .neighborhood .brand-bar {
     width: 100%;
@@ -294,10 +347,11 @@ body {
 }
 .form-container .headline {
     text-align: center;
+    color: white;
 }
 .form {
-    width: 80%;
-    padding: 75px;
+    width: 85%;
+    padding: 50px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -331,13 +385,19 @@ body {
     background: #2B2E33;
     color: white;
     padding: 8px;
-    border: 1px solid #919499;
+    border: 2px solid #919499;
     border-radius: 4px;
     font-size: 1em;
+}
+.form label {
+    font-size: 1.2;
 }
 .radio-fields {
     display: flex;
     padding: 8px;
+}
+.radio-field label {
+    font-size: 1em;
 }
 .radio-field:nth-child(2) {
     margin-left: 15px;
@@ -357,14 +417,21 @@ input[name="pet"] {
     text-align: center;
 }
 .submit-but {
+    width: 160px;
+    height: 50px;
     background: #1160E9 !important;
+    border-radius: 2px;
+    color: white;
     border: none !important;
+    font-weight: 700;
+    font-size: .8em !important;
+    border: none;
 }
 
 
 /* Footer */
 .footer {
-    height: 7vh;
+    height: 5vh;
     border-top: 1px solid #919499;
     background: #2B2E33;
     color: #9DA1A6;
@@ -380,16 +447,56 @@ input[name="pet"] {
 }
 .footer-left {
     display: flex;
+    text-transform: uppercase;
+    color: #9DA1A6;
+    font-weight: 600;
+    font-size: .7em;
+}
+.footer-left span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .footer-left div {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30px;
 }
 .divider {
     width: 2px;
-    height: 30px;
+    height: 15px;
     background: #9DA1A6;
-    margin: 0px 15px;
+    margin: 0px 20px;
+}
+.footer-right {
+    background: url('/assets/footer-right.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;   
+    height: 15px;
+    width: 7%;
+}
+
+/* CSS for thanks.html */
+.thanks {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+.thanks div {
+    border: 1px solid #919499;
+    border-radius: 4px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.thanks div h1 {
+    margin-bottom: 15px;
+}
+.thanks div span {
+    color: #9DA1A6;
 }
