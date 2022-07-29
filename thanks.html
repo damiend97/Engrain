@@ -169,121 +169,121 @@
             </div>
         </div>
     </div>
+    <script>
+        openImage = (id) => {
+            // media query
+            var mq = window.matchMedia("(max-width: 480px)");
+    
+            // figure for id strings
+            let sub = id.substr(0, id.indexOf('-')); 
+            let img = sub + "-image";
+            let open = sub + "-open";
+            let close = sub + "-close";
+    
+            // open mobile
+            if (mq.matches) {
+                document.getElementById(`${img}`).style.height = "35vh";
+                document.getElementById(`${img}`).style.width = "90vw";
+                document.getElementById(`${img}`).style.position = "fixed";
+                document.getElementById(`${img}`).style.top = "30vh";
+                document.getElementById(`${img}`).style.left = "5vw";
+                document.getElementById(`${img}`).style.zIndex = "5000";
+                document.getElementById(`${open}`).style.display = "none";
+                document.getElementById(`${close}`).style.display = "block";
+                document.getElementById('mask').style.display = "block";
+            }
+            
+            // open desktop
+            else {
+                document.getElementById(`${img}`).style.height = "80vh";
+                document.getElementById(`${img}`).style.width = "70vw";
+                document.getElementById(`${img}`).style.position = "fixed";
+                document.getElementById(`${img}`).style.top = "10vh";
+                document.getElementById(`${img}`).style.left = "15vw";
+                document.getElementById(`${img}`).style.zIndex = "5000";
+                document.getElementById(`${open}`).style.display = "none";
+                document.getElementById(`${close}`).style.display = "block";
+                document.getElementById('mask').style.display = "block";
+            }
+            
+            // remove margin from amen-image
+            if(img[0] === "a") {
+                document.getElementById(`${img}`).style.margin = "0";
+            }
+    
+            // add caption
+            if(img === "a1-image") {
+                document.getElementById('cap').style.width = "100vw";
+                document.getElementById('cap').style.color = "white";
+                document.getElementById('cap').style.position = "fixed";
+                document.getElementById('cap').style.bottom = "3vh";
+                document.getElementById('cap').style.left = "0";
+                document.getElementById('cap').style.zIndex = "10000"
+            }
+    
+        } 
+    
+        closeImage = (id) => {
+            // media query
+            var mq = window.matchMedia("(max-width: 480px)");
+    
+            // figure for id strings
+            let sub = id.substr(0, id.indexOf('-')); 
+            let img = sub + "-image";
+            let open = sub + "-open";
+            let close = sub + "-close";
+    
+            // close mobile
+            if (mq.matches) {
+                // amenities images reset
+                if(img[0] === "a") {
+                    document.getElementById(`${img}`).style.height = "200px";
+                    document.getElementById(`${img}`).style.width = "100%";
+                } 
+                // intro image reset
+                else {
+                    document.getElementById(`${img}`).style.height = "200px";
+                    document.getElementById(`${img}`).style.width = "100%";
+                }
+            }
+    
+            // close desktop
+            else {
+                // amenities images reset
+                if(img[0] === "a") {
+                    document.getElementById(`${img}`).style.height = "50vh";
+                    document.getElementById(`${img}`).style.width = "100%";
+                } 
+                // intro image reset
+                else {
+                    document.getElementById(`${img}`).style.height = "50vh";
+                    document.getElementById(`${img}`).style.width = "57%";
+                }
+            }
+            
+            // close mobile+desktop
+            document.getElementById(`${img}`).style.position = "relative";
+            document.getElementById(`${img}`).style.top = "0";
+            document.getElementById(`${img}`).style.left = "0";
+            document.getElementById(`${img}`).style.zIndex = "1000";
+            document.getElementById(`${open}`).style.display = "block";
+            document.getElementById(`${close}`).style.display = "none";
+            document.getElementById('mask').style.display = "none";
+    
+            // a2 margin reset
+            if(img === "a2-image") {
+                document.getElementById(`${img}`).style.marginTop = "50px";
+            }
+    
+            // close caption
+            if(img === "a1-image") {
+                document.getElementById('cap').style.width = "100%";
+                document.getElementById('cap').style.color = "initial";
+                document.getElementById('cap').style.position = "initial";
+                document.getElementById('cap').style.bottom = "0";
+                document.getElementById('cap').style.left = "0";
+            }
+        }
+    </script>
 </body>
-<script>
-    openImage = (id) => {
-        // media query
-        var mq = window.matchMedia("(max-width: 480px)");
-
-        // figure for id strings
-        let sub = id.substr(0, id.indexOf('-')); 
-        let img = sub + "-image";
-        let open = sub + "-open";
-        let close = sub + "-close";
-
-        // open mobile
-        if (mq.matches) {
-            document.getElementById(`${img}`).style.height = "35vh";
-            document.getElementById(`${img}`).style.width = "90vw";
-            document.getElementById(`${img}`).style.position = "fixed";
-            document.getElementById(`${img}`).style.top = "30vh";
-            document.getElementById(`${img}`).style.left = "5vw";
-            document.getElementById(`${img}`).style.zIndex = "5000";
-            document.getElementById(`${open}`).style.display = "none";
-            document.getElementById(`${close}`).style.display = "block";
-            document.getElementById('mask').style.display = "block";
-        }
-        
-        // open desktop
-        else {
-            document.getElementById(`${img}`).style.height = "80vh";
-            document.getElementById(`${img}`).style.width = "70vw";
-            document.getElementById(`${img}`).style.position = "fixed";
-            document.getElementById(`${img}`).style.top = "10vh";
-            document.getElementById(`${img}`).style.left = "15vw";
-            document.getElementById(`${img}`).style.zIndex = "5000";
-            document.getElementById(`${open}`).style.display = "none";
-            document.getElementById(`${close}`).style.display = "block";
-            document.getElementById('mask').style.display = "block";
-        }
-        
-        // remove margin from amen-image
-        if(img[0] === "a") {
-            document.getElementById(`${img}`).style.margin = "0";
-        }
-
-        // add caption
-        if(img === "a1-image") {
-            document.getElementById('cap').style.width = "100vw";
-            document.getElementById('cap').style.color = "white";
-            document.getElementById('cap').style.position = "fixed";
-            document.getElementById('cap').style.bottom = "3vh";
-            document.getElementById('cap').style.left = "0";
-            document.getElementById('cap').style.zIndex = "10000"
-        }
-
-    } 
-
-    closeImage = (id) => {
-        // media query
-        var mq = window.matchMedia("(max-width: 480px)");
-
-        // figure for id strings
-        let sub = id.substr(0, id.indexOf('-')); 
-        let img = sub + "-image";
-        let open = sub + "-open";
-        let close = sub + "-close";
-
-        // close mobile
-        if (mq.matches) {
-            // amenities images reset
-            if(img[0] === "a") {
-                document.getElementById(`${img}`).style.height = "200px";
-                document.getElementById(`${img}`).style.width = "100%";
-            } 
-            // intro image reset
-            else {
-                document.getElementById(`${img}`).style.height = "200px";
-                document.getElementById(`${img}`).style.width = "100%";
-            }
-        }
-
-        // close desktop
-        else {
-            // amenities images reset
-            if(img[0] === "a") {
-                document.getElementById(`${img}`).style.height = "50vh";
-                document.getElementById(`${img}`).style.width = "100%";
-            } 
-            // intro image reset
-            else {
-                document.getElementById(`${img}`).style.height = "50vh";
-                document.getElementById(`${img}`).style.width = "57%";
-            }
-        }
-        
-        // close mobile+desktop
-        document.getElementById(`${img}`).style.position = "relative";
-        document.getElementById(`${img}`).style.top = "0";
-        document.getElementById(`${img}`).style.left = "0";
-        document.getElementById(`${img}`).style.zIndex = "1000";
-        document.getElementById(`${open}`).style.display = "block";
-        document.getElementById(`${close}`).style.display = "none";
-        document.getElementById('mask').style.display = "none";
-
-        // a2 margin reset
-        if(img === "a2-image") {
-            document.getElementById(`${img}`).style.marginTop = "50px";
-        }
-
-        // close caption
-        if(img === "a1-image") {
-            document.getElementById('cap').style.width = "100%";
-            document.getElementById('cap').style.color = "initial";
-            document.getElementById('cap').style.position = "initial";
-            document.getElementById('cap').style.bottom = "0";
-            document.getElementById('cap').style.left = "0";
-        }
-    }
-</script>
 </html>
