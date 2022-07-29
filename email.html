@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engrain Email Confirmation</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /* Settings */
+        body {
+            background: #EDEFF2;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        /* Root Container */
+        .container {
+            background: white;
+            border-radius: 4px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+        /* Hero */
+        .color-bar {
+            height: 5vh;
+            background: #1160E9;
+            border-top-right-radius: 4px;
+            border-top-left-radius: 4px;
+        }
+        .hero-image {
+            background: url('./assets/checker.png');
+            background-position: center;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            height: 80vh;
+            border-bottom: 3px solid #EDEFF2;
+        }
+
+        /* Overview */
+        .overview {
+            margin-top: 50px;
+            padding-bottom: 50px;
+        }
+        .w-70 {
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .headline {
+            color: #1160E9;
+            font-size: 3.5em;
+            font-weight: bolder;
+        }
+        .content {
+            color: #616366;
+            font-size: 1.75em;
+            margin-top: 25px;
+        }
+        .row {
+            margin-top: 25px;
+            border-left: 5px solid #1160E9;
+            font-size: 1.75em;
+            font-weight: bolder;
+            padding-left: 15px;
+        }
+        .bottom-border {
+            height: 3px;
+            width: 100%;
+            background: #D2D5D9;
+            margin-bottom: 50px;
+        }
+
+        /* Featured */
+        .featured {
+            padding-bottom: 50px;
+        }
+        .featured .headline {
+            margin-bottom: 25px;
+        }
+        .title {
+            margin-bottom: 10px;
+            font-size: 1.75em;
+            text-transform: uppercase;
+            font-weight: bolder;
+        }
+        .featured ul {
+            margin-bottom: 25px;
+        }
+        .featured ul li {
+            margin-left: 25px;
+            font-size: 1.75em;
+            color: #616366;
+        }
+
+        /* Footer */
+        .footer {
+            background: #000;
+            color: white;
+            font-size: 2em;
+        }
+        .footer-top {
+            display: flex;
+            padding: 50px 0px;
+        }
+        .footer-top .footer-left, .footer-top .footer-right {
+            width: 50%;
+        }
+        .footer-top .footer-left a {
+            color: white;
+        }
+        .footer-top .footer-right {
+            text-align: right;
+            background: url('./assets/footer-right.png');
+            background-size: contain;
+            background-position: right;
+            background-repeat: no-repeat;
+        }
+        .divider {
+            height: 3px;
+            background: #919499;
+        }
+        .footer-bot {
+            padding: 50px 0px;
+        }
+        .footer-stretch {
+            width: 100%;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .footer-nested {
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-bot .footer-left, .footer-bot .footer-right {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+        .footer-bot span {
+            margin-top: 10px;
+        }
+        .privacy {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Root Container -->
+    <div class="container">
+        <!-- Hero -->
+        <div class="hero">
+            <div class="color-bar"></div>
+            <div class="hero-image"></div>
+        </div>
+
+        <!-- Overview -->
+        <div class="overview w-70">
+            <div class="headline">Thanks for your interest in [Property Name]!</div>
+            <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mauris libero, interdum ac ex ut, bibendum tempor ipsum. Nulla vestibulum risus lectus, fringilla laoreet mi faucibus vulputate. Pellentesque commodo mattis justo, vitae condimentum ex malesuada quis.</div>
+            <div class="row">Studios, 1 and 2 Bedroom Floor Plans Available</div>
+            <div class="row">Opening Summer 2022</div>
+        </div>
+        <div class="bottom-border"></div>
+
+        <!-- Featured -->
+        <div class="featured w-70">
+            <div class="headline">Featured Amenities</div>
+            <div class="section">
+                <div class="title">Apartment</div>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Nam porttitor urna eu elit sollicitudin feugiat.</li>
+                    <li>Nullam gravida lorem a ornare lobortis.</li>
+                    <li>Proin ultricies felis ut diam pharetra ornare.</li>
+                    <li>Maecenas volutpat elit non tincidunt bibendum.</li>
+                </ul>
+            </div>
+            <div class="section">
+                <div class="title">Community</div>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Nam porttitor urna eu elit sollicitudin feugiat.</li>
+                    <li>Nullam gravida lorem a ornare lobortis.</li>
+                    <li>Proin ultricies felis ut diam pharetra ornare.</li>
+                    <li>Maecenas volutpat elit non tincidunt bibendum.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="w-70">
+                <div class="footer-top">
+                    <div class="footer-left"><a href="https://PropertyURL.com">PropertyURL.com</a></div>
+                    <div class="footer-right"></div>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="footer">
+            <div class="w-70">
+                <div class="footer-bot">
+                    <div class="footer-stretch">Address</div>
+                    <div class="footer-nested">
+                        <div class="footer-left">
+                            <span>5555 Streetname St.</span>
+                            <span>Cityname, AA 55555</span>
+                            <span>(555) 555-5555</span>
+                        </div>
+                        <div class="footer-right">
+                            <span>&#169; 2022 [Property Name]</span>
+                            <span>All Rights Reserved.</span>
+                            <span class="privacy">Privacy Policy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

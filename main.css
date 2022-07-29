@@ -78,6 +78,7 @@ a {
     justify-content: center;
     align-items: center;
 }
+
 /* Hero */
 .hero {
     height: 90vh;
@@ -131,7 +132,7 @@ a {
 .hero .brand-bar {
     width: 100%;
     height: 8px;
-    background: blue;
+    background: #1160E9;
     position: absolute;
     bottom: 15vh;
 }
@@ -193,6 +194,9 @@ a {
     bottom: 15px;
     left: 15px;
     display: none;
+}
+.open:hover, .close:hover {
+    cursor: pointer;
 }
 .intro-content {
     height: 60vh;
@@ -330,6 +334,7 @@ a {
 .amen-item-img {
     list-style-image: url('./assets/cam.png');
 }
+
 /* Neighborhood */
 .neighborhood {
     margin-top: 100px;
@@ -364,7 +369,7 @@ a {
 .neighborhood .brand-bar {
     width: 100%;
     height: 8px;
-    background: blue;
+    background: #1160E9;
     position: absolute;
     z-index: -100;
     bottom: 15vh;
@@ -466,7 +471,6 @@ input[name="pet"] {
     font-size: .8em !important;
     border: none;
 }
-
 
 /* Footer */
 .footer {
@@ -601,9 +605,8 @@ input[name="pet"] {
         display: block;
     }
     .intro-image {
-        height: auto;
-        width: 100% !important;
-        height: 200px !important;
+        width: 100%;
+        height: 200px;
         margin-left: auto;
         margin-right: auto;
 
@@ -707,7 +710,6 @@ input[name="pet"] {
     }
     .divider {
         display: none !important;
-
     }
     .footer-right {
         width: 35%;

@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <!-- Mask for full image -->
+    <div id="mask"></div>
+
     <!-- Navigation -->
     <div class="navigation">
         <div class="logo"></div>
@@ -38,7 +41,10 @@
     <!-- Intro -->
     <div class="intro" id="intro">
         <div class="intro-nested">
-            <div class="intro-image"></div>
+            <div class="intro-image" id="intro-image">
+                <div class="open" id="intro-open"  onclick="openImage(this.id)"></div>
+                <div class="close" id="intro-close" onclick="closeImage(this.id)"></div>
+            </div>
             <div class="intro-content">
                 <div class="content-nested">
                     <div class="content-header">
@@ -109,10 +115,16 @@
         </div>
         <div class="amen-images">
             <div class="amen-image-capped">
-                <div class="amen-image"></div>
-                <div class="cap">Photo caption lorem ipsum dolor sit amet consectetur.</div>
+                <div class="amen-image" id="a1-image">
+                    <div class="open" id="a1-open" onclick="openImage(this.id)"></div>
+                    <div class="close" id="a1-close" onclick="closeImage(this.id)"></div>
+                </div>
+                <div class="cap" id="cap">Photo caption lorem ipsum dolor sit amet consectetur.</div>
             </div>
-            <div class="amen-image m-top"></div>
+            <div class="amen-image m-top" id="a2-image">
+                <div class="open" id="a2-open" onclick="openImage(this.id)"></div>
+                <div class="close" id="a2-close" onclick="closeImage(this.id)"></div>
+            </div>
         </div>
     </div>
 
@@ -158,4 +170,120 @@
         </div>
     </div>
 </body>
+<script>
+    openImage = (id) => {
+        // media query
+        var mq = window.matchMedia("(max-width: 480px)");
+
+        // figure for id strings
+        let sub = id.substr(0, id.indexOf('-')); 
+        let img = sub + "-image";
+        let open = sub + "-open";
+        let close = sub + "-close";
+
+        // open mobile
+        if (mq.matches) {
+            document.getElementById(`${img}`).style.height = "35vh";
+            document.getElementById(`${img}`).style.width = "90vw";
+            document.getElementById(`${img}`).style.position = "fixed";
+            document.getElementById(`${img}`).style.top = "30vh";
+            document.getElementById(`${img}`).style.left = "5vw";
+            document.getElementById(`${img}`).style.zIndex = "5000";
+            document.getElementById(`${open}`).style.display = "none";
+            document.getElementById(`${close}`).style.display = "block";
+            document.getElementById('mask').style.display = "block";
+        }
+        
+        // open desktop
+        else {
+            document.getElementById(`${img}`).style.height = "80vh";
+            document.getElementById(`${img}`).style.width = "70vw";
+            document.getElementById(`${img}`).style.position = "fixed";
+            document.getElementById(`${img}`).style.top = "10vh";
+            document.getElementById(`${img}`).style.left = "15vw";
+            document.getElementById(`${img}`).style.zIndex = "5000";
+            document.getElementById(`${open}`).style.display = "none";
+            document.getElementById(`${close}`).style.display = "block";
+            document.getElementById('mask').style.display = "block";
+        }
+        
+        // remove margin from amen-image
+        if(img[0] === "a") {
+            document.getElementById(`${img}`).style.margin = "0";
+        }
+
+        // add caption
+        if(img === "a1-image") {
+            document.getElementById('cap').style.width = "100vw";
+            document.getElementById('cap').style.color = "white";
+            document.getElementById('cap').style.position = "fixed";
+            document.getElementById('cap').style.bottom = "3vh";
+            document.getElementById('cap').style.left = "0";
+            document.getElementById('cap').style.zIndex = "10000"
+        }
+
+    } 
+
+    closeImage = (id) => {
+        // media query
+        var mq = window.matchMedia("(max-width: 480px)");
+
+        // figure for id strings
+        let sub = id.substr(0, id.indexOf('-')); 
+        let img = sub + "-image";
+        let open = sub + "-open";
+        let close = sub + "-close";
+
+        // close mobile
+        if (mq.matches) {
+            // amenities images reset
+            if(img[0] === "a") {
+                document.getElementById(`${img}`).style.height = "200px";
+                document.getElementById(`${img}`).style.width = "100%";
+            } 
+            // intro image reset
+            else {
+                document.getElementById(`${img}`).style.height = "200px";
+                document.getElementById(`${img}`).style.width = "100%";
+            }
+        }
+
+        // close desktop
+        else {
+            // amenities images reset
+            if(img[0] === "a") {
+                document.getElementById(`${img}`).style.height = "50vh";
+                document.getElementById(`${img}`).style.width = "100%";
+            } 
+            // intro image reset
+            else {
+                document.getElementById(`${img}`).style.height = "50vh";
+                document.getElementById(`${img}`).style.width = "57%";
+            }
+        }
+        
+        // close mobile+desktop
+        document.getElementById(`${img}`).style.position = "relative";
+        document.getElementById(`${img}`).style.top = "0";
+        document.getElementById(`${img}`).style.left = "0";
+        document.getElementById(`${img}`).style.zIndex = "1000";
+        document.getElementById(`${open}`).style.display = "block";
+        document.getElementById(`${close}`).style.display = "none";
+        document.getElementById('mask').style.display = "none";
+
+        // a2 margin reset
+        if(img === "a2-image") {
+            document.getElementById(`${img}`).style.marginTop = "50px";
+        }
+
+        // close caption
+        if(img === "a1-image") {
+            document.getElementById('cap').style.width = "100%";
+            document.getElementById('cap').style.color = "initial";
+            document.getElementById('cap').style.position = "initial";
+            document.getElementById('cap').style.bottom = "0";
+            document.getElementById('cap').style.left = "0";
+        }
+    }
+</script>
 </html>
