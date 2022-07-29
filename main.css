@@ -11,6 +11,7 @@
 body {
     background: #EDEFF2;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 /* Mask for full image */
@@ -230,6 +231,7 @@ a {
     font-weight: 600;
     font-size: 1.25em;
     color: #222426;
+    text-transform: uppercase;
 }
 .fp-options {
     margin-top: 35px;
@@ -244,6 +246,7 @@ a {
     color: #616366;
     font-size: 1.25em;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 /* Amenities */
@@ -297,6 +300,7 @@ a {
     width: 100%;
     height: 25px;
     font-size: 1.2;
+    font-style: italic;
 }
 .category {
     margin-top: 15px;
@@ -309,6 +313,7 @@ a {
     color: #222426;
     font-size: 1.2;
     margin-top: 25px;
+    margin-bottom: 10px;
 }
 .cat-title:first-child {
     margin-top: 65px;
@@ -534,3 +539,180 @@ input[name="pet"] {
 .thanks div span {
     color: #9DA1A6;
 }
+
+/* Media Queries */
+@media screen and (max-width: 480px) {
+    /* Navigation */
+    .navigation {
+        justify-content: center;
+        width: 100%;
+    }
+    .links {
+        display: none;
+    }
+    .logo {
+        margin-left: 0;
+    }
+    
+    /* Hero */
+    .hero {
+        display: block;
+        padding: 0;
+        height: auto;
+    }
+    .hero-image {
+        width: 100%;
+        position: relative;
+        right: 0;
+    }
+    .hero-card {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        background: #EDEFF2;
+        box-shadow: none;
+    }
+    .card-content {
+        background: #fff;
+        height: auto;
+        width: 80%;
+        padding: 20px;
+        margin-top: -50px;
+        box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.08);
+    }
+    .hero .brand-bar {
+        bottom: 50px;
+    }
+    .ui-overlay {
+        height: 50px;
+    }
+
+    /* Intro */
+    .intro {
+        height: auto;
+        display: block;
+        width: 80%;
+        margin: 50px auto 0 auto;
+        padding: 20px;
+    }
+    .intro-nested {
+        display: block;
+    }
+    .intro-image {
+        height: auto;
+        width: 100% !important;
+        height: 200px !important;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .intro-content {
+        height: auto;
+        width: 100%;
+        margin-top: 50px;
+    }
+    
+    /* Floor Plans */
+    .floor-plans {
+        margin-top: 50px;
+        width: 80%;
+        padding: 20px;
+    }
+    .fp-options {
+        display: grid;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 50% 50%;
+    }
+    .option {
+        margin: 15px;
+    }
+
+    /* Amenities */
+    .amenities {
+        height: auto;
+        width: 80%;
+        margin-top: 50px;
+        display: block;
+        padding: 20px;
+    }
+    .amen-content {
+        width: 100%;
+    }
+    .cat-title {
+        margin-top: 40px !important;
+    }
+    .amen-images {
+        width: 100%;
+        margin-top: 50px;
+    }
+    .amen-image {
+        height: 200px;
+    }
+    
+    /* Neighborhood */
+    .neighborhood {
+        width: 100%;
+        height: 80vh;
+        margin-top: 50px;
+    }
+    .w-40 {
+        width: 90%;
+        line-height: 35px;
+        font-size: 1.5em;
+    }
+    .map {
+        width: 90%;
+        left: 5%;
+    }
+
+    /* Form */
+    .form-container {
+        padding-top: 25px;
+    }
+    .form-container .headline {
+        font-size: 1.5em;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .form {
+        padding: 0;
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .form-row {
+        display: block;
+        width: 100%;
+    }
+    .form-field {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    /* Footer */
+    .footer {
+        height: auto;
+        padding: 25px 0px;
+    }
+    .footer-nested{
+        display: block;
+    }
+    .footer-left {
+        display: block;
+    }
+    .footer-left span {
+        margin-bottom: 25px;
+    }
+    .divider {
+        display: none !important;
+
+    }
+    .footer-right {
+        width: 35%;
+        height: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
